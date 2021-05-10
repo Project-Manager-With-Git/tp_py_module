@@ -34,7 +34,7 @@
         "example": {
             "source": "cp_py_files//class_simple",
             "description": "例子类",
-            "default_path": "{{ name }}/{{ name }}.py"
+            "default_path": "{{ name ~ '/' ~ name }}.py"
         }
     }
 }
