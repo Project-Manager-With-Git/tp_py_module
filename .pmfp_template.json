@@ -1,0 +1,40 @@
+{
+    "language": "py",
+    "env": "venv",
+    "description": "用于快速构造python模块",
+    "author": "hsz",
+    "template_type": "module",
+    "test_requires": [
+        "coverage >= 5.5",
+        "mypy >= 0.800",
+        "autopep8 >= 1.5.6",
+        "pylint >= 2.8.0",
+        "pydocstyle>=6.0.0"
+    ],
+    "test": {
+        "source": "cp_python_test//simplemodule_tests",
+        "default_path": "tests"
+    },
+    "template_keys": {
+        "app_name": {
+            "description": "项目名",
+            "default": "{{ project_name }}"
+        },
+        "name": {
+            "description": "模块名",
+            "default": "example"
+        }
+    },
+    "components": {
+        "mod": {
+            "source": "module",
+            "description": "模块模板",
+            "default_path": "{{ name }}"
+        },
+        "example": {
+            "source": "cp_py_files//class_simple",
+            "description": "例子类",
+            "default_path": "{{ name }}/{{ name }}.py"
+        }
+    }
+}
