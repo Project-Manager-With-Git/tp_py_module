@@ -12,7 +12,7 @@
         "pydocstyle>=6.0.0"
     ],
     "test": {
-        "source": "cp_python_test//simplemodule_tests",
+        "source": "cp_python_test@v0.0.1//simplemodule_tests",
         "default_path": "tests"
     },
     "template_keys": {
@@ -32,7 +32,7 @@
             "default_path": "{{ name }}"
         },
         "example": {
-            "source": "cp_py_files//class_simple",
+            "source": "cp_py_files@v0.0.1//class_simple",
             "description": "例子类",
             "default_path": "{{ name ~ '/' ~ name }}.py"
         }
